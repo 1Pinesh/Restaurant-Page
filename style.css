@@ -1,0 +1,52 @@
+body {
+  background-color: #a6e7c3;
+}
+
+/* Restaurant title */
+.restaurant-title {
+  display: flex;
+  flex-flow: row;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.restaurant-title {
+  margin-left: 90px;
+  margin-right: 120px;
+}
+.restaurant-title h1 {
+  margin: 0;
+  margin-right: 9px;
+  color: #cb6a5d;
+}
+
+/* Menu Bar (Nav Bar) */
+#menu-bar ul {
+  display: flex;
+  flex-flow: row;
+  margin: 0;
+  gap: 50px;
+}
+
+#menu-bar li {
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+}
+
+#menu-bar li {
+  font-weight: 800;
+  font-size: 25px;
+  color: #cb6a5d;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
