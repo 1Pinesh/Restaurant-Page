@@ -8,7 +8,9 @@ const createHeader = () => {
   boatSpan.textContent = "sailing";
 
   const title = document.createElement("h1");
-  title.textContent = boatSpan.value + " The Baratie";
+
+  title.textContent += " The Baratie";
+  title.prepend(boatSpan);
 
   const navBar = document.createElement("nav");
   navBar.id = "menu-bar";
@@ -17,7 +19,7 @@ const createHeader = () => {
 
   liItem.forEach((e) => {
     const li = document.createElement("li");
-    li.id = e.toLowerCase;
+    li.id = e.toLowerCase();
     li.textContent = e;
 
     ulList.appendChild(li);
@@ -26,4 +28,7 @@ const createHeader = () => {
   navBar.append(ulList);
 
   headerTag.append(headerContainer);
+  headerContainer.append(title);
+  headerContainer.append(navBar);
 };
+export default createHeader();
