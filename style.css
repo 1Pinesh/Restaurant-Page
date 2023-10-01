@@ -142,10 +142,22 @@ footer {
 
 #menu-container {
   display: flex;
+  justify-content: center;
   flex-flow: row;
   flex-wrap: wrap;
+  overflow: scroll;
+  height: 500px;
+  gap: 30px;
+  border-radius: 20px;
 }
 
 .menu-item img {
   width: 200px;
+}
+
+.menu-item {
+  width: 450px;
+  inline-size: 200px;
+  gap: 20px;
+  text-align: center;
 }
