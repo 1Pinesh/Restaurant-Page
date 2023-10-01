@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
+
 body {
   background-color: #a6e7c3;
+  font-family: "Bubblegum Sans", cursive;
 }
 
 /* Restaurant title */
@@ -49,4 +52,88 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px;
+}
+
+/* Pirate Scroll */
+.pirate-scroll {
+  padding: 10px;
+  border: 4px solid burlywood;
+  border-radius: 90px 90px 90px 90px/ 90px 90px 80px 90px;
+  height: 550px;
+  background-color: #e5ad4d;
+}
+
+/* Pirate COntent */
+.pirate-content {
+  margin-top: 10px;
+  height: 500px;
+}
+
+.home {
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Intro */
+#intro {
+  color: #bf7257;
+  width: 500px;
+}
+
+/* wave box */
+#wave {
+  position: relative;
+
+  width: 500px;
+  height: 70px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#wave .wave {
+  position: absolute;
+  width: 500px;
+  height: 90px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: url(../src/Resource/wave.png);
+  background-size: 500px 90px;
+}
+
+#wave .wave.wave1 {
+  animation: mWave 30s linear infinite;
+}
+
+@keyframes mWave {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 500px;
+  }
+}
+
+/* Boat */
+#boat {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  font-family: 50px;
+  padding-bottom: 10px;
+  border-bottom: 8px solid #bf7257;
+}
+
+.boat {
+  font-size: 80px;
 }

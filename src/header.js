@@ -31,9 +31,7 @@ const createHeader = () => {
   headerContainer.append(title);
   headerContainer.append(navBar);
 
-  document.body.appendChild(headerContainer);
+  document.body.prepend(headerContainer);
 };
 
-// createHeader();
-
-export default createHeader();
+export default createHeader;
