@@ -1,6 +1,8 @@
 const createMenu = () => {
   // Create contentBox and menuContainer dynamically
   const contentBox = document.getElementById("content");
+  // clear the box of existing data
+  contentBox.innerHTML = "";
 
   // pirate-scroll con
   const pirate_ScrollDiv = document.createElement("div");
@@ -53,7 +55,6 @@ const createMenu = () => {
         const mealName = meal.strMeal;
         const imageUrl = meal.strMealThumb || "placeholder-image.jpg";
 
-        // Create a menu item for each meal
         createMenuItem(mealName, imageUrl);
       });
     } catch (error) {
