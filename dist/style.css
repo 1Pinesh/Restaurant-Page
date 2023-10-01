@@ -137,3 +137,15 @@ footer {
 .boat {
   font-size: 80px;
 }
+
+/* Menu */
+
+#menu-container {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.menu-item img {
+  width: 200px;
+}
