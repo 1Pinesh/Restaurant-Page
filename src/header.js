@@ -15,7 +15,7 @@ const createHeader = () => {
   const navBar = document.createElement("nav");
   navBar.id = "menu-bar";
   const ulList = document.createElement("ul");
-  const liItem = ["Home", "Menu", "About"];
+  const liItem = ["Home", "Menu", "Contact"];
 
   liItem.forEach((e) => {
     const li = document.createElement("li");
