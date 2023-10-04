@@ -210,3 +210,42 @@ footer {
   color: yellow;
   font-weight: 800;
 }
+
+/* Contact Contaier */
+.contacts-con {
+  width: 430px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+/* contact col */
+.contanct-col {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.contacts-con h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact card */
+.contact-card {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  width: auto;
+}
+.contact-card .icon {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-flow: column;
+  flex-shrink: 1;
+  width: 200px;
+}
