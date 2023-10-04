@@ -67,18 +67,17 @@ const createMenu = () => {
     const menuItem = document.createElement("div");
     menuItem.classList.add("menu-item");
 
-    // Populate the menu item using string literal
     menuItem.innerHTML = `
         <img src="${imageUrl}" alt="${mealName}">
-        <h2>${mealName}</h2>
+        <h2 >${mealName}</h2>
+        <div class="button-con"><button id="${mealName}" class="orderBtn">🛒</button></div>
       `;
 
-    // Append the menu item to the container in the HTML
     const menuContainer = document.getElementById("menu-container");
+
     menuContainer.appendChild(menuItem);
   }
 
-  // Call the async function
   fetchProductData();
 };
 
