@@ -31,15 +31,12 @@ const createMenu = () => {
       "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood";
 
     try {
-      // Make a GET request to the API
       const response = await fetch(apiUrl);
 
-      // Check if the request was successful (status code 200)
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
 
-      // Parse the JSON response
       const productData = await response.json();
 
       // Check if the expected data structure is present
@@ -81,4 +78,4 @@ const createMenu = () => {
   fetchProductData();
 };
 
-createMenu();
+export default createMenu;
