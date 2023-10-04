@@ -58,7 +58,7 @@ footer {
 .pirate-scroll {
   padding: 10px;
   border: 4px solid burlywood;
-  border-radius: 90px 90px 90px 90px/ 90px 90px 80px 90px;
+  border-radius: 20px;
   height: 550px;
   background-color: #e5ad4d;
 }
@@ -138,6 +138,13 @@ footer {
   font-size: 80px;
 }
 
+/* Button con */
+.button-con {
+  margin-top: auto;
+  display: flex;
+  justify-content: end;
+}
+
 /* Menu */
 
 #menu-container {
@@ -145,7 +152,8 @@ footer {
   justify-content: center;
   flex-flow: row;
   flex-wrap: wrap;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
   height: 500px;
   gap: 30px;
   border-radius: 20px;
@@ -153,11 +161,33 @@ footer {
 
 .menu-item img {
   width: 200px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 .menu-item {
+  position: relative;
   width: 450px;
   inline-size: 200px;
   gap: 20px;
   text-align: center;
+}
+
+.menu-item h2 {
+  margin: 0;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.menu-item {
+  border: 2px solid lightblue;
+  border-radius: 20px;
+}
+
+.menu-item button {
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  right: 0;
 }
