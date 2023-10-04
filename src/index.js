@@ -10,7 +10,7 @@ const IndexController = () => {
   // Getting Nav ids
   const homeNav = document.getElementById("home");
   const menuNav = document.getElementById("menu");
-  const aboutNav = document.getElementById("about");
+  const aboutNav = document.getElementById("contact");
 
   const state = {
     HOMESTATE: 0,
@@ -47,7 +47,3 @@ const IndexController = () => {
 };
 
 IndexController();
-
-function component() {
-  const elements = document.createElement("div");
-}
