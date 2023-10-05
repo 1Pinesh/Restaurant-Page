@@ -249,3 +249,29 @@ footer {
   flex-shrink: 1;
   width: 200px;
 }
+
+/* Opening hours */
+
+.openingHours-Con {
+  border: 2px solid black;
+  width: 430px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.openingHours-Con h1 {
+  display: flex;
+  justify-content: center;
+}
+.times {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.time {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
