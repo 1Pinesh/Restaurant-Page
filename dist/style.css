@@ -210,6 +210,10 @@ footer {
   color: yellow;
   font-weight: 800;
 }
+/* Right side contact container */
+.rightSide {
+  width: 46 0px;
+}
 
 /* Contact Contaier */
 .contacts-con {

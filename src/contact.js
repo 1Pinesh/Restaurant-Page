@@ -3,6 +3,9 @@ const createContact = () => {
   // clearing the content inside the content box;
   contentBox.innerHTML = "";
 
+  const rightSide = document.createElement("div");
+  rightSide.classList.add("rightSide");
+
   // pirate-scroll con
   const pirate_ScrollDiv = document.createElement("div");
   pirate_ScrollDiv.classList.add("pirate-scroll");
@@ -28,7 +31,11 @@ const createContact = () => {
   // Appeding
   contentBox.appendChild(pirate_ScrollDiv);
   pirate_ScrollDiv.appendChild(pirateContent);
-  pirateContent.appendChild(contactCon);
+  pirateContent.appendChild(rightSide);
+
+  rightSide.appendChild(contactCon);
+  rightSide.appendChild(createOpening());
+
   contactCon.appendChild(contactTitle);
   contactCon.appendChild(contactCOl);
   for (const card of contacts) {
@@ -73,4 +80,38 @@ const createContactCard = () => {
   return contact;
 };
 
-createContact();
+const schedule = [
+  "Monday: 8:00am- 8:00pm",
+  "Tuesday: 8:00am- 8:00pm",
+  "Wednesday: 8:00am- 8:00pm",
+  "CLOSED",
+  "Friday: 8:00am- 8:00pm",
+  "Saturday: 8:00am- 8:00pm",
+  "Sunday: 8:00am- 8:00pm",
+];
+
+const createOpening = () => {
+  const openhoursDIv = document.createElement("div");
+  openhoursDIv.classList.add("openingHours-Con");
+
+  const openTitle = document.createElement("h1");
+  openTitle.textContent = "Opening Hours";
+
+  const timeCon = document.createElement("div");
+  timeCon.classList.add("times");
+
+  schedule.forEach((time) => {
+    const spanTime = document.createElement("span");
+    spanTime.classList.add("time");
+    spanTime.textContent = time;
+    timeCon.appendChild(spanTime);
+  });
+
+  // Appending
+  openhoursDIv.appendChild(openTitle);
+  openhoursDIv.appendChild(timeCon);
+  return openhoursDIv;
+};
+
+export default createContact;
+// createContact();

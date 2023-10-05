@@ -3,6 +3,7 @@ import _ from "lodash";
 import createHeader from "../src/header.js";
 import homeContent from "../src/homeContent.js";
 import createMenu from "../src/menu.js";
+import createContact from "../src/contact.js";
 
 const IndexController = () => {
   createHeader();
@@ -10,12 +11,12 @@ const IndexController = () => {
   // Getting Nav ids
   const homeNav = document.getElementById("home");
   const menuNav = document.getElementById("menu");
-  const aboutNav = document.getElementById("contact");
+  const contactNav = document.getElementById("contact");
 
   const state = {
     HOMESTATE: 0,
     MENUSTATE: 1,
-    ABOUTSTATE: 2,
+    CONTACTSTATE: 2,
   };
   let currentState = state.HOMESTATE;
 
@@ -27,8 +28,10 @@ const IndexController = () => {
     currentState = state.MENUSTATE;
     controlState();
   });
-
-  aboutNav.addEventListener;
+  contactNav.addEventListener("click", () => {
+    currentState = state.CONTACTSTATE;
+    createContact();
+  });
 
   const controlState = () => {
     switch (currentState) {
@@ -38,7 +41,7 @@ const IndexController = () => {
       case state.MENUSTATE:
         createMenu();
         break;
-      case state.ABOUTSTATE:
+      case state.CONTACTSTATESTATE:
         break;
     }
   };
